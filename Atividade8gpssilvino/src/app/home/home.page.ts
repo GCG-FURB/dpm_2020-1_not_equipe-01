@@ -1,4 +1,4 @@
-import { AfterContentInit, Component, OnInit, ViewChild} from '@angular/core';
+import { AfterContentInit, Component, OnInit, ViewChild, ElementRef} from '@angular/core';
 declare var google;
 
 @Component({
@@ -8,7 +8,8 @@ declare var google;
 })
 export class HomePage implements OnInit, AfterContentInit {
   map;
-  @ViewChild('mapElement') mapElement;
+ @ViewChild('mapElement', {static: true}) mapElement: ElementRef;
+ //@ViewChild(‘Map’, {static: true}) mapElement: ElementRef;
   constructor() {
   }
 
