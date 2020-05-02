@@ -1,0 +1,39 @@
+{
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "Banana",
+      "tipo": "Fruta"
+    },
+    {
+      "id": "2",
+      "nome": "Maça",
+      "tipo": "Fruta"
+    },
+    {
+      "id": "3",
+      "nome": "Uva",
+      "tipo": "Fruta"
+    }
+  ],
+  "pessoas": [
+    {
+      "id": "1",
+      "nome": "Anderson",
+      "sexo": "M",
+      "idade": 22
+    },
+    {
+      "id": "2",
+      "nome": "Mayara",
+      "sexo": "F",
+      "idade": 20
+    },
+    {
+      "id": "3",
+      "nome": "Claudia",
+      "sexo": "F",
+      "idade": 19
+    }
+  ]
+}

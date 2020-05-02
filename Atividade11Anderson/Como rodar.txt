@@ -1,0 +1,8 @@
+Na pasta at11 execute o comando:
+
+ionic serve
+
+Para executar o servidor baixe "npm i json-server -g"
+Execute dentro da pasta json-server:
+
+json-server db.json

@@ -1,0 +1,7 @@
+{
+  "name": "at11",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

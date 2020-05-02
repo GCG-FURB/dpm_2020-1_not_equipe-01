@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Produtos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item *ngFor="let produto of produtos">
+    <ion-button color="danger" shape="round" fill="outline" size="small" (click)="del(produto)">
+      <ion-icon slot="icon-only" name="trash"></ion-icon>
+    </ion-button>
+    &nbsp;&nbsp;&nbsp;
+    <h2> Id: {{produto.id}} - Nome: {{produto.nome}} - Tipo: {{produto.tipo}}</h2>
+  </ion-item>
+
+</ion-content>

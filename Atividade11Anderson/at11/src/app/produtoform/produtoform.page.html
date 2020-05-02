@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cadastro de produtos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="save()">Salvar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked="">Nome Produto</ion-label>
+      <ion-input [(ngModel)]="produto.nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked="">Tipo Produto</ion-label>
+      <ion-select [(ngModel)]="produto.tipo">
+        <ion-select-option>Fruta</ion-select-option>
+        <ion-select-option>Legume</ion-select-option>
+        <ion-select-option>Carne</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>

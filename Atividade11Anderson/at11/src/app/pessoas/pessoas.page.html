@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Pessoas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item *ngFor="let pessoa of pessoas">
+    <ion-button color="danger" shape="round" fill="outline" size="small" (click)="del(pessoa)">
+      <ion-icon slot="icon-only" name="trash"></ion-icon>
+    </ion-button>
+    &nbsp;&nbsp;&nbsp;
+    <h2> Id: {{pessoa.id}} - Nome: {{pessoa.nome}} - Sexo: {{pessoa.sexo}} - Idade: {{pessoa.idade}}</h2>
+  </ion-item>
+
+</ion-content>

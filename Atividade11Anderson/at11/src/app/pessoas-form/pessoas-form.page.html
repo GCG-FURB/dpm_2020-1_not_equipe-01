@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cadastro de pessoas</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="save()">Salvar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked="">Nome Pessoa</ion-label>
+      <ion-input [(ngModel)]="pessoa.nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked="">Sexo Pessoa</ion-label>
+      <ion-select [(ngModel)]="pessoa.sexo">
+        <ion-select-option>M</ion-select-option>
+        <ion-select-option>F</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked="">Idade Pessoa</ion-label>
+      <ion-input [(ngModel)]="pessoa.idade"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
