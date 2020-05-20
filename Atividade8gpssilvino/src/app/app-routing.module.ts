@@ -8,8 +8,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'geolocalizacao',
     pathMatch: 'full'
+  },
+  {
+    path: 'geolocalizacao',
+    loadChildren: () => import('./geolocalizacao/geolocalizacao.module').then( m => m.GeolocalizacaoPageModule)
   },
 ];
 

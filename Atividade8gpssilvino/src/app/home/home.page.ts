@@ -14,14 +14,27 @@ export class HomePage implements OnInit, AfterContentInit {
   }
 
   ngOnInit(): void {
+    const position = new google.maps.LatLng(-21.763409, -43.349034);
+
+    const mapOptions = {
+      zoom: 18,
+      center: position,
+      setMyLocationButtonEnabled: true,
+      disableDefaultUI: false
+    }
+
+    this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+
+    const marker = new google.maps.Marker({
+      position: position,
+      map: this.map,
+      animation: google.maps.Animation.DROP
+    });
   }
 
+  
+
   ngAfterContentInit(): void {
-    this.map = new google.maps.Map(
-        this.mapElement.nativeElement,
-        {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
+    
   }
 }
