@@ -21,17 +21,10 @@
   
   <ion-card>
     <ion-item>      
-      <ion-button color="primary" (click)="startPlay()" *ngIf="!ehGravando">Gravar</ion-button>
-      <ion-button color="primary" (click)="pauseAudio()" *ngIf="ehGravando">Pausar</ion-button>
-    </ion-item>
+      <ion-button color="primary" (click)="captureAudio()">Captura audio</ion-button>      
+    </ion-item>    
   </ion-card>
   
-  <ion-card>  
-    <ion-item>      
-      <ion-button color="primary" (click)="gravarVideo()">Camera Video</ion-button>      
-    </ion-item>
-  </ion-card>
-
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Tab 1</ion-title>

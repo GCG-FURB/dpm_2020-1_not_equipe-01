@@ -8,6 +8,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 // import { MediaCapture, MediaFile, CaptureError, CaptureImageOptions } from '@ionic-native/media-capture/ngx';
 import { Camera } from '@ionic-native/camera/ngx'
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery/ngx';
+import { Media, MediaObject } from '@ionic-native/media/ngx';
+import { VideoCapturePlus } from '@ionic-native/video-capture-plus/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,7 +23,9 @@ import { AppComponent } from './app.component';
     SplashScreen,        
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     Camera,
-    Base64ToGallery
+    Base64ToGallery,
+    Media,
+    VideoCapturePlus
   ],
   bootstrap: [AppComponent]
 })

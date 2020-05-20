@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { Media, MediaObject } from '@ionic-native/media/ngx';
-import { VideoCapturePlus, VideoCapturePlusOptions, MediaFile } from '@ionic-native/video-capture-plus/ngx';
+import { MediaCapture, MediaFile, CaptureError, CaptureImageOptions } from '@ionic-native/media-capture/ngx';
+// import { VideoCapturePlus, VideoCapturePlusOptions, MediaFile } from '@ionic-native/video-capture-plus/ngx';
 
 @Component({
   selector: 'app-tab1',
@@ -11,14 +12,16 @@ import { VideoCapturePlus, VideoCapturePlusOptions, MediaFile } from '@ionic-nat
 })
 export class Tab1Page {
 
-
   private _platform: Platform;
   private _file: MediaObject;
   private _media: Media;    
   photo: any;
   ehGravando: Boolean = false;
+  respostaAudio: any;
 
-  constructor(private camera: Camera, platform: Platform, private media: Media, private videoCapturePlus: VideoCapturePlus) { }
+  constructor(private camera: Camera, platform: Platform, private media: Media, private mediaCapture: MediaCapture) {     
+    this._platform = platform;
+  }
   // constructor(){}
 
   takePicture() {
@@ -47,36 +50,11 @@ export class Tab1Page {
       })
   }
 
-  private startAudio(): void {
-    let _pathFile = this.getPathFileRecordAudio();
-    this._file = this.media.create(_pathFile);
-    this._file.play();
-  }
-
-  public pauseAudio(): void {
-      this.ehGravando = false;
-      this._file.pause();
-  }
-
-  public startPlay(): void {
-    this.ehGravando = true;
-    this._file.play();
-  }
-
-  private getPathFileRecordAudio(): string {
-    let path: string = (this._platform.is('ios') ? '../Library/NoCloud/': '../Documents/');
-    return path + 'testeAudio' + '-' + '.mp3';
-  }
-
-  public gravarVideo() {
-    const options: VideoCapturePlusOptions = {
-      limit: 1,
-      highquality: true,
-      portraitOverlay: 'assets/img/camera/overlay/portrait.png',
-      landscapeOverlay: 'assets/img/camera/overlay/landscape.png'
-   }
-   
-   this.videoCapturePlus.captureVideo(options).then((mediafile: MediaFile[]) => console.log(mediafile), error => console.log('Something went wrong'));
+  
+  captureAudio() {
+    this.mediaCapture.captureAudio().then(res => {
+      console.log("Sucesso...........");
+    }, (err: CaptureError) => console.error(err));
   }
 
 }
