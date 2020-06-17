@@ -8,14 +8,30 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Usuário</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong class="capitalize">Usuário</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="person-circle-outline" slot="start"></ion-icon>      
+      <ion-label>Adailton Hafemann</ion-label>
+      <ion-button fill="outline" slot="end">Editar</ion-button>
+    </ion-item>
+  
+    <ion-card-content>
+      Informações relevantes
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="person-circle-outline" slot="start"></ion-icon>      
+      <ion-label>Anderson Pozzi</ion-label>
+      <ion-button fill="outline" slot="end">Editar</ion-button>
+    </ion-item>
+  
+    <ion-card-content>
+      Informações relevantes
+    </ion-card-content>
+  </ion-card>
+    
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">    
+    <ion-fab-button [routerLink]="['/Usuario/Edit']" routerDirection="root"><ion-icon name="person-add-outline"></ion-icon></ion-fab-button>
+  </ion-fab>
 </ion-content>

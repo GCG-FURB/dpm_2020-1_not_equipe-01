@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>    
+    <ion-title>Novo Deposito</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div>
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descrição</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Usuário</ion-label>
+      <ion-input></ion-input>
+    </ion-item>   
+    <ion-button expand="full">Salvar</ion-button>
+    <ion-button expand="full" color="light" [routerLink]="['/Deposito']" routerDirection="root">Cancelar</ion-button>
+  </div>
+</ion-content>
+  

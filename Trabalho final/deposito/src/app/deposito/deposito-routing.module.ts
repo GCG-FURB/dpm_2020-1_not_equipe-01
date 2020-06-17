@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: DepositoPage
+  },
+  {
+    path: 'Edit',
+    loadChildren: () => import('./deposito-edit/deposito-edit.module').then( m => m.DepositoEditPageModule)
   }
 ];
 

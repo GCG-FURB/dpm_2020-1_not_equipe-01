@@ -8,14 +8,24 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Home</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong class="capitalize">Home</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-button [routerLink]="['/Item']" routerDirection="root" color="medium" size="large" expand="full" fill="solid">
+    <ion-icon slot="start" name="pricetag"></ion-icon>
+    Item
+  </ion-button>
+  <ion-button [routerLink]="['/Deposito']" routerDirection="root" color="medium" size="large" expand="full" fill="solid">
+    <ion-icon slot="start" name="cube"></ion-icon>
+    Depósito
+  </ion-button>
+  <ion-button [routerLink]="['/Area']" routerDirection="root" color="medium" size="large" expand="full" fill="solid">
+    <ion-icon slot="start" name="map"></ion-icon>
+    Area
+  </ion-button>
+  <ion-button [routerLink]="['/Usuario']" routerDirection="root" color="medium" size="large" expand="full" fill="solid">
+    <ion-icon slot="start" name="person"></ion-icon>
+    Usuário
+  </ion-button>
+  <ion-button [routerLink]="['/Sobre']" routerDirection="root" color="medium" size="large" expand="full" fill="solid">
+    <ion-icon slot="start" name="information-circle"></ion-icon>
+    Sobre
+  </ion-button>
 </ion-content>

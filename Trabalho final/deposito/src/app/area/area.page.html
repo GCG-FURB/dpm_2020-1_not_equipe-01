@@ -8,14 +8,31 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Area</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong class="capitalize">Area</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="map" slot="start"></ion-icon>      
+      <ion-label>Vila Nova - 01</ion-label>
+      <ion-button fill="outline" slot="end">Editar</ion-button>
+    </ion-item>
+  
+    <ion-card-content>
+      Informações relevantes
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-item>
+      <ion-icon name="map" slot="start"></ion-icon>      
+      <ion-label>Barra Velha - 02</ion-label>
+      <ion-button fill="outline" slot="end">Editar</ion-button>
+    </ion-item>
+  
+    <ion-card-content>
+      Informações relevantes
+    </ion-card-content>
+  </ion-card>
+    
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">    
+    <ion-fab-button [routerLink]="['/Area/Edit']" routerDirection="root"><ion-icon name="add-circle-outline"></ion-icon></ion-fab-button>
+  </ion-fab>
 </ion-content>

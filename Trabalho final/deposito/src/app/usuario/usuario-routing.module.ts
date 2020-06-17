@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: UsuarioPage
+  },
+  {
+    path: 'Edit',
+    loadChildren: () => import('./usuario-edit/usuario-edit.module').then( m => m.UsuarioEditPageModule)
   }
 ];
 
