@@ -8,11 +8,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card>
+
+  <ion-card *ngFor="let item of items">
     <ion-item>
       <ion-icon name="pricetag" slot="start"></ion-icon>      
-      <ion-label>Bicicleta</ion-label>
-      <ion-button fill="outline" slot="end">Editar</ion-button>
+      <ion-label>{{item.nome}}</ion-label>
+      <ion-button color="danger" shape="round" fill="outline" size="small" (click)="del(item)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
     </ion-item>
   
     <ion-card-content>
@@ -20,17 +23,6 @@
     </ion-card-content>
   </ion-card>
   
-  <ion-card>
-    <ion-item>
-      <ion-icon name="pricetag" slot="start"></ion-icon>      
-      <ion-label>Carro</ion-label>
-      <ion-button fill="outline" slot="end">Editar</ion-button>
-    </ion-item>
-  
-    <ion-card-content>
-      Informações relevantes
-    </ion-card-content>
-  </ion-card>
     
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">    
     <ion-fab-button [routerLink]="['/Item/Edit']" routerDirection="root"><ion-icon name="add-circle-outline"></ion-icon></ion-fab-button>

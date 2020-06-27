@@ -7,14 +7,14 @@
   <div>
     <ion-item>
       <ion-label position="floating">Nome</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="usuario.nome"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Username</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="usuario.username"></ion-input>
     </ion-item>   
-    <ion-button expand="full">Salvar</ion-button>
-    <ion-button expand="full" color="light" [routerLink]="['/Item']" routerDirection="root">Cancelar</ion-button>
+    <ion-button expand="full" (click)="save()">Salvar</ion-button>
+    <ion-button expand="full" color="light" [routerLink]="['/Usuario']" routerDirection="root">Cancelar</ion-button>
   </div>
 </ion-content>
   

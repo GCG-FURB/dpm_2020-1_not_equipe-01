@@ -8,11 +8,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card>
+
+  <ion-card *ngFor="let area of areas">
     <ion-item>
       <ion-icon name="map" slot="start"></ion-icon>      
-      <ion-label>Vila Nova - 01</ion-label>
-      <ion-button fill="outline" (click)="editar()" slot="end">Editar</ion-button>
+      <ion-label>{{area.nome}}</ion-label>
+      <ion-button color="danger" shape="round" fill="outline" size="small" (click)="del(area)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
     </ion-item>
   
     <ion-card-content>
@@ -20,18 +23,6 @@
     </ion-card-content>
   </ion-card>
   
-  <ion-card>
-    <ion-item>
-      <ion-icon name="map" slot="start"></ion-icon>      
-      <ion-label>Barra Velha - 02</ion-label>
-      <ion-button fill="outline" slot="end">Editar</ion-button>
-    </ion-item>
-  
-    <ion-card-content>
-      Informações relevantes
-    </ion-card-content>
-  </ion-card>
-    
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">    
     <ion-fab-button [routerLink]="['/Area/Edit']" routerDirection="root"><ion-icon name="add-circle-outline"></ion-icon></ion-fab-button>
   </ion-fab>

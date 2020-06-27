@@ -7,17 +7,17 @@
   <div>
     <ion-item>
       <ion-label position="floating">Nome</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="deposito.nome"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Descrição</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="deposito.descricao"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Usuário</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="deposito.usuario"></ion-input>
     </ion-item>   
-    <ion-button expand="full">Salvar</ion-button>
+    <ion-button expand="full" (click)="save()">Salvar</ion-button>
     <ion-button expand="full" color="light" [routerLink]="['/Deposito']" routerDirection="root">Cancelar</ion-button>
   </div>
 </ion-content>
