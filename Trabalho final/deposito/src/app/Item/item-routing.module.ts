@@ -9,7 +9,7 @@ const routes: Routes = [
     component: ItemPage
   },
   {
-    path: 'Edit',
+    path: 'Edit/:id',
     loadChildren: () => import('./item-edit/item.modules').then( m => m.ItemEditPageModule)
   }
 ];

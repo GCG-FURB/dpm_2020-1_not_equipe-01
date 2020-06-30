@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AreaService } from './area.service';
+import { DepositoService } from '../deposito/deposito.service';
 
 @Component({
   selector: 'app-area',
@@ -10,10 +11,12 @@ import { AreaService } from './area.service';
 export class AreaPage implements OnInit {
   public folder: string;
   public areas: any;
+  public listaDeposito: any;
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    public areaService: AreaService
+    public areaService: AreaService,
+    private depositoService: DepositoService
     ) { }
 
   ngOnInit() {

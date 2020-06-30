@@ -9,7 +9,7 @@ const routes: Routes = [
     component: AreaPage
   },
   {
-    path: 'Edit',
+    path: 'Edit/:id',
     loadChildren: () => import('./area-edit/area-edit.module').then( m => m.AreaEditPageModule)
   }
 ];

@@ -14,8 +14,10 @@
       <ion-input [(ngModel)]="deposito.descricao"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Usuário</ion-label>
-      <ion-input [(ngModel)]="deposito.usuario"></ion-input>
+      <ion-label>Usuário</ion-label>
+      <ion-select [(ngModel)]="usuarioSelecionado">
+        <ion-select-option [value]="usuario" *ngFor="let usuario of listaUsuario">{{usuario.nome}}</ion-select-option>        
+      </ion-select>      
     </ion-item>   
     <ion-button expand="full" (click)="save()">Salvar</ion-button>
     <ion-button expand="full" color="light" [routerLink]="['/Deposito']" routerDirection="root">Cancelar</ion-button>

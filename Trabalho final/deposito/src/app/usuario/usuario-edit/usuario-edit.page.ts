@@ -24,17 +24,33 @@ export class UsuarioEditPage implements OnInit {
 
   ngOnInit() {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');
+    if (this.folder != '0') {
+      this.usuarioService.getById(this.folder).subscribe((request : any) => {
+        this.usuario = request;        
+      });
+    }
   }
 
   save() {
-    this.usuarioService.add(this.usuario).subscribe(async result => {
-      const toast = await this.toastController.create({
-        message: 'Saved',
-        duration: 2000
+    if (this.folder != '0') {      
+      this.usuarioService.update(this.folder, this.usuario).subscribe(async result => {
+        const toast = await this.toastController.create({
+          message: 'Saved',
+          duration: 2000
+        });
+        toast.present();
+        this.router.navigate(['/Usuario']);
       });
-      toast.present();
-      this.router.navigate(['/Usuario']);
-    });
+    } else {
+      this.usuarioService.add(this.usuario).subscribe(async result => {
+        const toast = await this.toastController.create({
+          message: 'Saved',
+          duration: 2000
+        });
+        toast.present();
+        this.router.navigate(['/Usuario']);
+      });
+    }
   }
 
 }

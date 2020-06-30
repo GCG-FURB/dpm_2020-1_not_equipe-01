@@ -14,6 +14,14 @@ export class DepositoService {
     return this.http.get(this.url);
   }
 
+  getById(id: any) {
+    return this.http.get(this.url + '/' + id);
+  }
+
+  update(id: any, deposito : any) {
+    return this.http.put(this.url + '/' + id, deposito);
+  }
+
   add(deposito : any) {
     return this.http.post(this.url, deposito);
   }

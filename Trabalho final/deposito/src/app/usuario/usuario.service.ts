@@ -15,6 +15,14 @@ export class UsuarioService {
     return this.http.get(this.url);
   }
 
+  getById(id: any) {
+    return this.http.get(this.url + '/' + id);
+  }
+
+  update(id: any, usuario : any) {
+    return this.http.put(this.url + '/' + id, usuario);
+  }
+
   add(usuario : any) {
     return this.http.post(this.url, usuario);
   }

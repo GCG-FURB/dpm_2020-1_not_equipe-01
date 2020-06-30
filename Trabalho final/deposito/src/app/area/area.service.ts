@@ -14,6 +14,14 @@ export class AreaService {
     return this.http.get(this.url);
   }
 
+  getById(id: any) {
+    return this.http.get(this.url + '/' + id);
+  }
+
+  update(id: any, area : any) {
+    return this.http.put(this.url + '/' + id, area);
+  }
+
   add(area : any) {
     return this.http.post(this.url, area);
   }

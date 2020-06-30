@@ -12,10 +12,12 @@
     <ion-item>
       <ion-label position="floating">Descrição</ion-label>
       <ion-input [(ngModel)]="area.descricao"></ion-input>
-    </ion-item>
+    </ion-item>    
     <ion-item>
-      <ion-label position="floating">Depósito</ion-label>
-      <ion-input [(ngModel)]="area.deposito"></ion-input>
+      <ion-label>Depósito</ion-label>
+      <ion-select [(ngModel)]="depositoSelecionado">
+        <ion-select-option [value]="deposito" *ngFor="let deposito of listaDeposito">{{deposito.nome}}</ion-select-option>        
+      </ion-select>      
     </ion-item>    
     <ion-button expand="full" (click)="save()">Salvar</ion-button>
     <ion-button expand="full" color="light" [routerLink]="['/Area']" routerDirection="root">Cancelar</ion-button>

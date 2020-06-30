@@ -14,6 +14,14 @@ export class ItemService {
     return this.http.get(this.url);
   }
 
+  getById(id: any) {
+    return this.http.get(this.url + '/' + id);
+  }
+
+  update(id: any, item : any) {
+    return this.http.put(this.url + '/' + id, item);
+  }
+
   add(item : any) {
     return this.http.post(this.url, item);
   }
