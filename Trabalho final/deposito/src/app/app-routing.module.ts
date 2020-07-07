@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'Sobre',
     loadChildren: () => import('./sobre/sobre.module').then( m => m.SobrePageModule)
+  },
+  {
+    path: 'Config',
+    loadChildren: () => import('./config/config.module').then( m => m.ConfigPageModule)
   }
 ];
 

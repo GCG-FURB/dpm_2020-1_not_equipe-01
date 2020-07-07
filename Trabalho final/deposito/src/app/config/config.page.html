@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Area</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>
+    <ion-label position="floating">Ip Servidor</ion-label>
+    <ion-input [(ngModel)]="servidor"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="save()">Salvar</ion-button>
+</ion-content>

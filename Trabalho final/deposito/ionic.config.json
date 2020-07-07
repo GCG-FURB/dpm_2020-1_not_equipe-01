@@ -1,5 +1,7 @@
 {
   "name": "deposito",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

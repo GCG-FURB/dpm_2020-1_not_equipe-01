@@ -14,8 +14,9 @@
       <ion-input [(ngModel)]="item.descricao"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Código de barras</ion-label>
-      <ion-input [(ngModel)]="item.codigodebarras"></ion-input>
+      <ion-label>Código de barras</ion-label>
+      <ion-input [(ngModel)]="item.codigodebarras"></ion-input> 
+      <ion-button (click)="lerCodigoBarra()"><ion-icon name="barcode-outline"></ion-icon></ion-button>      
     </ion-item>
     <ion-item>
       <ion-label>Area</ion-label>
@@ -39,6 +40,9 @@
       <ion-label position="floating">Data de Cadastro</ion-label>
       <ion-datetime [(ngModel)]="item.cadastro"  value="2019-10-01T15:43:40.394Z" display-timezone="utc"></ion-datetime>
     </ion-item>
+    <ion-fab slot="fixed" vertical="top" horizontal="end">    
+      <ion-fab-button (click)="lerQrCode()"><ion-icon name="qr-code-outline"></ion-icon></ion-fab-button>
+    </ion-fab>
     <ion-button expand="full" (click)="save()">Salvar</ion-button>
     <ion-button expand="full" color="light" [routerLink]="['/Item']" routerDirection="root">Cancelar</ion-button>
   </div>
