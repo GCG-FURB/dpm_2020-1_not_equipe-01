@@ -1,0 +1,5 @@
+Para testar basta instalar o .apk no seu celular. depois de instalar abra o app,
+na Tela Home, no canto direito em baixo tem um btn para configurar o ip do servidor,
+EX: 192.168.1.106, deve ser colocado apenas isso, depois de salvar, basta ir
+no Home novamente e utilizar o App normalmente, não esquecer de subiur o servidor
+em seu computador. Tem um exemplo de QRCode e de codigo de barras.
