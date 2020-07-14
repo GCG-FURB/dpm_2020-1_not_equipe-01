@@ -1,5 +1,21 @@
+Para configurar o banco de dados é necessario fazer o seguinte.
+1 - Fazer download do postgres e rodar ele... ao instalar utilize a senha 12345678.
+2 - Criar uma database nomeada "depositoFurb".
+3 - Utilizar o arquivo de backup de base dentro da pasta "sql".
+(Caso n der certo só rode os comandos para criar as tabelas apenas).
+
+OBS: caso não tenha colocado a senha do posgress como 12345678, você deve ir no seguinta arquivo e alterar a senha colocada lá.
+no repositorio local dentro do trabalho final ir na pasta: 'backend/.env' e na variavel DB_PASS colocar a senha que adicionou na instalação.
+
+Para executar o backend é necessario fazer.
+1 - Primeiro faça um npm install no projeto.
+2 - Terá que ter o postgres configurado com a base corretamente.
+3 - para executar o backend utilizar "npm start"
+
+
 Para testar basta instalar o .apk no seu celular. depois de instalar abra o app,
 na Tela Home, no canto direito em baixo tem um btn para configurar o ip do servidor,
+Para descobrir o ip basca abrir um cmd e digitar ipconfig e o ipv4 é o que deve ser inserido.
 EX: 192.168.1.106, deve ser colocado apenas isso, depois de salvar, basta ir
 no Home novamente e utilizar o App normalmente, não esquecer de subiur o servidor
 em seu computador. Tem um exemplo de QRCode e de codigo de barras.
